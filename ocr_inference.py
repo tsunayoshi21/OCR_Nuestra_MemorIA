@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-OCR PDF Processor with OlmOCR and Custom DHiSS Models
+OCR PDF Processor with OlmOCR and Custom Recognizers Models finetuned with DHiSS Dataset
 
 This script processes PDF files using the OlmOCR model with custom DHiSS recognition models.
 It includes a temperature-based fallback mechanism for robust text extraction.
 
 Usage:
-    python olmocr_run_better_fallback.py
+    python ocr_inference.py
 
 Configuration:
     Edit the CONFIG dictionary below to customize:
@@ -15,12 +15,15 @@ Configuration:
     - Detector model
     - Output folder name
     - Custom OCR settings
+    Or use command line arguments to override these settings.
+    For detailed usage instructions, run:
+        python ocr_inference.py --help
 
 Requirements:
-    See requirements.txt for dependencies
+    See enviroments folder for required packages and versions.
     
-Author: [Your Name]
-Date: October 2025
+Author: Cristobal Vasquez, NuestraMemorIA
+Date: November 2025
 """
 
 import torch
