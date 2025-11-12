@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Data files y resultados grandes
+# Descomenta las líneas que quieras ignorar:
+
+# Carpetas de resultados OCR (probablemente muy grandes)
+# MMDH_Repositorio_Archivo Extranjería/
+# PDFs/
+# PDFs_Darwin/
+# PDFs_test/
+# uruguay_profe_domingo/
+Extras/
+# Archivos de resultados específicos
+# olmOCR*/
+# *_OCR/
+
+# Pesos del modelo (suelen ser muy grandes)
+# ocr_weights/
+*.pt
+# *.pth
+# *.ckpt
+
+*.txt
+
+# Archivos de log
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.bak
+
+# Archivos grandes de PDF o imágenes (si no quieres versionar PDFs)
+# *.pdf
+# *.PDF
+
+# Archivos de imágenes procesadas (si son muchos)
+# *.png
+# *.jpg
+# *.jpeg
+# *.tiff
+
+# Backups
+*.backup
+backup_*/
+
+# Credenciales y configuración sensible
+.env
+.env.local
+config.secret.yml
+credentials.json
