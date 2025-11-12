@@ -106,6 +106,17 @@ SUPPORTED_MODELS = {
         "checkpoint": "ocr_weights/DHiSS_finetuning_vitstr_base_10.pt",
         "max_length": 50,
     },
+    "DHiSS_v1_corrected_vitstr_base": {
+        "model_class": vitstr_base,
+        "checkpoint": "ocr_weights/DHiSS_finetuning_v1_corrected_full_vitstr_base_10.pt",
+        "max_length": 25,
+    },
+    "DHiSS_v1_corrected_parseq": {
+        "model_class": parseq,
+        "checkpoint": "ocr_weights/DHiSS_finetuning_v1_corrected_full_parseq_10.pt",
+        "max_length": 25,
+    },
+
     "DHiSS_v2_vitstr_base": {
         "model_class": vitstr_base,
         "checkpoint": "ocr_weights/DHiSS_finetuning_v2_vitstr_base_10.pt",
@@ -843,7 +854,11 @@ def main():
     print(f"🤖 Recognition model: {CONFIG['reco_model']}")
     print(f"🔍 Detector: {CONFIG['detector_model']}")
     print(f"💾 Output folder: {CONFIG['output_folder_name']}")
-    print(f"🖼️  Image resolution: {CONFIG['target_image_dim']}px (min: {CONFIG['min_pixels']:,}, max: {CONFIG['max_pixels']:,})")
+    print(f"🖼️  Image resolution: {CONFIG['target_image_dim']}px")
+    if CONFIG['min_pixels'] and CONFIG['max_pixels']:
+        print(f"(min: {CONFIG['min_pixels']:,}, max: {CONFIG['max_pixels']:,})")
+    else:
+        print(f"(min: default, max: default)")
     print()
     
     # Get configuration from CONFIG dictionary
